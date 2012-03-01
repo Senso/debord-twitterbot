@@ -13,6 +13,7 @@ class Bot:
 		
 		self.watching_tags = self.config.get('general', 'watch_tags').split(',')
 		self.ignore_users = self.config.get('general', 'ignore_users').split(',')
+		self.ignore_users.append(self.config.get('general', 'bot_name'))
 		self.replies = open(self.config.get('general', 'reply_strings')).readlines()
 		
 		self.api = twitter.Api(consumer_key=self.config.get('general','consumer_key'),
