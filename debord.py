@@ -7,7 +7,7 @@ from random import choice
 import twitter
 
 class Bot:
-	def __init__(self, config):
+	def __init__(self):
 		self.config = ConfigParser.ConfigParser()
 		self.config.readfp(open('config.txt'))
 		
@@ -59,3 +59,7 @@ class Bot:
 				
 				if user.screen_name not in self.ignore_users:
 					self.send_reply(tag, user, id)
+					
+if __name__ == '__main__':
+	bot = Bot()
+	bot.run()
