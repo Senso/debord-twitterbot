@@ -8,8 +8,8 @@ This project is a simple Twitter bot with one function: automatically replying t
 
 == HOW TO ==
 
-config.txt contains various, obvious I believe, values that you should fill in.
-replies.txt should contain all the possible replies the bot will post, one reply per line. The bot will choose a random line, so to avoid repetition I would suggest having at least 1,000 lines of less than 140 characters in there.
+config.txt contains various values, all obvious I believe, that you should fill in.
+replies.txt should contain all the possible replies the bot will post, one reply per line. The bot will choose a random line, so to avoid repetition I would suggest having at least 1,000 lines of less than 140 characters in there. It could be the Bible, insults, markov chains of James Joyce's Ulysses, whatever suits your boat.
 
 In order to quickly have a working bot, you should follow these steps:
 
@@ -21,6 +21,7 @@ In order to quickly have a working bot, you should follow these steps:
 * Change the "Access level" of your App to "Read, write, and direct messages".
 * Click on the "Create my access token" button, this should give you your Access token and Access token secret variables.
 * Open config.txt, put in Consumer key, Consumer secret, Access token and Access token secret where they belong.
+* While in config.txt, replace watch_tags with a comma-separated list of tags the bot should search for.
 
 == AUTOMATION ==
 
