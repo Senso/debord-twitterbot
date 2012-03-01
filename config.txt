@@ -8,4 +8,5 @@ watch_tags=#tag1,#tag2,#tag3
 ignore_users=BOT_NAME_HERE,OTHERS
 savefile=data.dat
 reply_strings=replies.txt
+debug=0
 
