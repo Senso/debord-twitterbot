@@ -43,6 +43,8 @@ class Bot:
 			reply = "@%s %s %s" % (user.screen_name, choice(self.replies), tag)
 			new_status = self.api.PostUpdate(reply, in_reply_to_status_id=id)
 			if new_status:
+				if self.config.get('general', 'debug'):
+					print new_status.text
 				self.data['ids_replied_to'] = self.data['ids_replied_to'].append(id)
 				self.data['last_id'] = new_status.id
 			time.sleep(5)
