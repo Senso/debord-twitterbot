@@ -45,6 +45,7 @@ class Bot:
 			if new_status:
 				self.data['ids_replied_to'] = self.data['ids_replied_to'].append(id)
 				self.data['last_id'] = new_status.id
+			time.sleep(5)
 				
 	def run(self):
 		for tag in self.watching_tags:
