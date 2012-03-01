@@ -1,0 +1,34 @@
+
+This project is a simple Twitter bot with one function: automatically replying to specific tags with random lines from a user-defined corpus.
+
+== DEPENDENCIES ==
+
+- Python 2.6+
+- Python-twitter module: http://code.google.com/p/python-twitter/
+
+== HOW TO ==
+
+config.txt contains various, obvious I believe, values that you should fill in.
+replies.txt should contain all the possible replies the bot will post, one reply per line. The bot will choose a random line, so to avoid repetition I would suggest having at least 1,000 lines of less than 140 characters in there.
+
+In order to quickly have a working bot, you should follow these steps:
+
+* Create a unique email account (Gmail, whatever)
+* Create a new Twitter account with that email
+* Visit https://dev.twitter.com/apps/new
+* Create a new Twitter App, fill in the blanks, no need for a "Callback URL".
+* Once your app is created, you should see the Consumer key and Consumer secret variables on your App page.
+* Change the "Access level" of your App to "Read, write, and direct messages".
+* Click on the "Create my access token" button, this should give you your Access token and Access token secret variables.
+* Open config.txt, put in Consumer key, Consumer secret, Access token and Access token secret where they belong.
+
+== AUTOMATION ==
+
+I would suggest setting a cron job (if you're on Linux, I have no idea for Windows).
+Something like this should do the work (place it in /etc/init.d/debord):
+*/20 * * * * <user> cd <path> && /usr/bin/python <path>/debord.py > /dev/null
+
+Example:
+*/20 * * * * senso cd /home/senso/debord && /usr/bin/python /home/senso/debord/debord.py > /dev/null
+
+
