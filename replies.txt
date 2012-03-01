@@ -1,0 +1,3 @@
+this file should contain a list of lines
+the bot will choose a random line
+from this file every time it replies to someone
