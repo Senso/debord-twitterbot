@@ -46,7 +46,7 @@ class Bot:
 			if new_status:
 				if self.config.get('general', 'debug'):
 					print new_status.text
-				self.data['ids_replied_to'] = self.data['ids_replied_to'].append(id)
+				self.data['ids_replied_to'].append(id)
 				self.data['last_id'] = new_status.id
 			time.sleep(5)
 				
