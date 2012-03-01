@@ -26,7 +26,7 @@ class Bot:
 		
 	def open_savefile(self):
 		try:
-			return pickle.load(config.get('general', 'savefile'))
+			return pickle.load(self.config.get('general', 'savefile'))
 		except:
 			data = {'last_id': None, 'ids_replied_to': []}
 			derp = open(self.config.get('general', 'savefile'), 'w')
