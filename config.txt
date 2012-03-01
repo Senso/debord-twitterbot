@@ -1,9 +1,9 @@
 [general]
 bot_name=MY_BOT_NAME
-con_key = CONSUMER_KEY
-con_secret = CONSUMER_SECRET
-as_token_key = ACCESS_TOKEN_KEY
-as_token_secret = ACCESS_TOKEN_SECRET
+consumer_key = CONSUMER_KEY
+consumer_secret = CONSUMER_SECRET
+access_token_key = ACCESS_TOKEN_KEY
+access_token_secret = ACCESS_TOKEN_SECRET
 watch_tags=#tag1,#tag2,#tag3
 ignore_users=BOT_NAME_HERE,OTHERS
 savefile=data.dat
