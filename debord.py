@@ -63,6 +63,7 @@ class Bot:
 				
 				if user.screen_name not in self.ignore_users:
 					self.send_reply(tag, user, id)
+		self.save_data()
 					
 if __name__ == '__main__':
 	bot = Bot()
