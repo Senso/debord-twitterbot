@@ -41,7 +41,7 @@ class Bot:
 	
 	def send_reply(self, tag, user, id):
 		if id not in self.data['ids_replied_to']:
-			reply = "@%s %s %s" % (user.screen_name, choice(self.replies).strip('\n', tag)
+			reply = "@%s %s %s" % (user.screen_name, choice(self.replies).strip('\n'), tag)
 			new_status = self.api.PostUpdate(reply, in_reply_to_status_id=id)
 			if new_status:
 				if self.config.get('general', 'debug'):
