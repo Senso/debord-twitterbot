@@ -34,7 +34,7 @@ class Bot:
 			derp.close()
 			return data
 		
-	def save_data():
+	def save_data(self):
 		derp = open(self.config.get('general', 'savefile'), 'w')
 		pickle.dump(self.data, derp)
 		derp.close()
