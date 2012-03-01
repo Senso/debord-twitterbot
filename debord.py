@@ -39,8 +39,8 @@ class Bot:
 		derp.close()
 	
 	def send_reply(self, tag, user, id):
-		if id not in data['ids_replied_to']:
-			reply = "@%s %s %s" % (u.screen_name, choice(self.replies), tag)
+		if id not in self.data['ids_replied_to']:
+			reply = "@%s %s %s" % (user.screen_name, choice(self.replies), tag)
 			new_status = self.api.PostUpdate(reply, in_reply_to_status_id=id)
 			if new_status:
 				self.data['ids_replied_to'] = self.data['ids_replied_to'].append(id)
